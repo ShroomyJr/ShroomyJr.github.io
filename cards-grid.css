@@ -58,9 +58,26 @@ body {
     color: hsla(200,0%,0%,.5);
 }
 
-.card .media {
+.card .media-round {
+    margin: auto;
+    margin-top: 16px;
+    height: 160px;
+    width: 200px;
     text-align: center;
-    height: 194px;
+    overflow: hidden;
+    border-radius: 1rem ;
+}
+
+.card .grid-body {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+}
+
+.card .media-round img {
+    flex-shrink: 0;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 
@@ -74,13 +91,34 @@ body {
     font-weight: 400;
     line-height: 1.5rem;
     font-size: 1rem;
+    min-height: 48px;
+}
+
+.list-item-text {
+    display: block;
+    font-weight: 600;
+}
+
+.list-text-secondary {
+    font-weight: 300;
+    line-height: 1rem;
 }
 
 .card .list-item-graphic {
     display: inline-flex;
     align-items: center;
+    text-align: center;
     height: 40px;
-    padding-right: 16px;
+    width: 40px;
+    overflow: hidden;
+    margin-right: 16px;
+    padding: 4px;
+    margin: 4px;
+}
+
+.graphic-circle {
+    background-color: aliceblue;
+    border-radius: 100%;
 }
 
 .card .title {
@@ -116,5 +154,40 @@ body {
     background-color: palegoldenrod;
 }
 .card:nth-child(4n+4) {
-    background-color: slateblue;
+    background-color: lightsalmon;
+}
+
+.chip-row {
+    padding-top: 12px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.chip {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    background-color: rgba(35, 47, 52, 0.2);
+    border-radius: 1rem;
+    height: 32px;
+}
+
+.chip-text {
+    align-self: baseline;
+    color: hsla(200,0%,0%,.8);
+    padding: 3px 12px;
+}
+
+
+.chip-row a{
+    text-decoration: none;
+}
+
+.chip img {
+    padding-top: 4px;
+    padding-left: 4px;
+    height: 24px;
+    border-radius: 100%;
 }
